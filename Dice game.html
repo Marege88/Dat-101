@@ -1,0 +1,34 @@
+<DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Dice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        .terning {
+            font-size: 80px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>dice roller</h1>
+    <div class="dice" id="dice">-</div>
+    <button onclick="RollDice()">Roll Dice</button>
+    <script>
+        function RollDice() {
+            const resultat = Math.floor(Math.random() * 6) + 1;
+            document.getElementById("dice").textContent = resultat;
+        }
+    </script>
+</body>
+</html>
