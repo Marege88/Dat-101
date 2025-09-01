@@ -11,6 +11,8 @@ function inputSetAgeClick(){
     const age = parseInt(inputAge.value);
     if(age >= 18){
         printOut("Du kan gå på kino");
+    }else if (age < 0) {
+        printOut("Ugyldig alder");
     }else{
         printOut("Beklager, spill heller et spill!");
     }
