@@ -3,6 +3,19 @@ import { printOut, newLine } from "../../common/script/utils.mjs";
 
 printOut("--- Part 1 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
+const accounts = 4;
+
+const accountsNames = ["brukskonto", "sparekonto", "kreditkonto", "pensionkonto"];
+
+const namesToShow = accountsNames.slice(0, accounts);
+
+printOut("antall kontoer: " + accounts);
+namesToShow.forEach ((names, idx) =>{
+    printOut ((idx + 1) + ". " + names);
+} );
+    
+
+
 printOut("Replace this with you answer!");
 printOut(newLine);
 
