@@ -253,6 +253,41 @@ printOut(newLine);
 
 printOut("--- Part 9 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
+function testMaths(){
+    let current = 1;
+    let allOk = true;
+    
+   
+    for (let line = 1; line <= 200; line++) {
+        let leftSum = 0; 
+        let rightSum = 0;
+        let leftText = "";
+        let rightText = "";
+        for (let i = 0; i < line +1; i++){
+            leftSum += current;
+            leftText += current + " ";
+            current++;
+        }
+
+        for (let j = 0; j < line; j++){
+            rightSum += current;
+            rightText += current + " ";
+            current++;
+        }
+       if (leftSum !== rightSum){
+        printOut (
+            "feil på linje " + line +": venstre= " + leftSum + ", høyre = " + rightSum
+        );
+        allOk = false;
+        break;
+       }
+    }
+    if (allOk){
+        printOut ("Maths fun!")
+    }
+}
+
+testMaths ();
 printOut("Replace this with you answer!");
 printOut(newLine);
 
