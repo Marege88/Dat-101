@@ -275,24 +275,35 @@ function testMaths(){
             current++;
         }
        if (leftSum !== rightSum){
-        printOut (
-            "feil på linje " + line +": venstre= " + leftSum + ", høyre = " + rightSum
-        );
+        
         allOk = false;
         break;
        }
     }
     if (allOk){
+        printOut ("1 2 = 3");
+        printOut ("4 5 6 = 7 8");
+        printOut ("9 10 11 12 = 13 14 15");
         printOut ("Maths fun!")
     }
 }
 
 testMaths ();
-printOut("Replace this with you answer!");
+
 printOut(newLine);
 
 /* Task 10*/
 printOut("--- Part 10 ---------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
+function factional(n) {
+    if(n === 1) {
+        return 1;
+    } else {
+        return n * factional(n - 1);
+    }
+}
+
+const result = factional (5);
+printOut ("Factional of 5 is " + result);
 printOut("Replace this with you answer!");
 printOut(newLine);
